@@ -108,7 +108,6 @@
 	</profiles>
 
   <modules>
-    <module>cooking-addon</module>
     <module>cooking-ui</module>
     <module>cooking-backend</module>
   </modules>
