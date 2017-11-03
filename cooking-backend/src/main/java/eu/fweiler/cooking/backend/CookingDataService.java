@@ -6,6 +6,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import eu.fweiler.cooking.backend.entity.CookingEntity;
+
 /**
  * Simple example CrudService for storing beans. This should be removed and
  * replaced with a better backend service implementation.
@@ -13,9 +15,12 @@ import java.util.Set;
  * @param <T>
  *            bean type
  */
-public class CrudService<T> implements Serializable {
+public class CookingDataService<T extends CookingEntity> implements Serializable {
 
-    private Set<T> storage = new LinkedHashSet<T>();
+    /**  */
+	private static final long serialVersionUID = 5104818778620360524L;
+	
+	private Set<T> storage = new LinkedHashSet<T>();
 
     public void save(T entity) {
         if (storage.contains(entity)) {
